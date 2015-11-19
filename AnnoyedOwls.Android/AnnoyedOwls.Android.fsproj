@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F2A71F9B-5D33-465A-A702-920D77279786}</ProjectTypeGuids>
+    <ProjectGuid>{FE25B45A-A844-4C9F-B742-694510D2D4FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AnnoyedOwls.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.fs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>AnnoyedOwls.Android</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>
+    </PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateTailCalls>true</GenerateTailCalls>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>
+    </PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="box2d">
+      <HintPath>..\packages\CocosSharp.PCL.Shared.1.6.2.0\lib\MonoAndroid10\box2d.dll</HintPath>
+    </Reference>
+    <Reference Include="CocosSharp">
+      <HintPath>..\packages\CocosSharp.PCL.Shared.1.6.2.0\lib\MonoAndroid10\CocosSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\packages\CocosSharp.PCL.Shared.1.6.2.0\lib\MonoAndroid10\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\CocosSharp.PCL.Shared.1.6.2.0\lib\MonoAndroid10\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\packages\CocosSharp.PCL.Shared.1.6.2.0\lib\MonoAndroid10\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="FarseerPhysics.Portable">
+      <HintPath>..\packages\FarseerPhysics.Portable.3.5.1\lib\portable-net4+sl4+wp8+win8\FarseerPhysics.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.fs" />
+    <Compile Include="Properties\AssemblyInfo.fs" />
+    <Compile Include="..\AnnoyedOwls.Windows\Game.fs">
+      <Link>Game.fs</Link>
+    </Compile>
+    <Compile Include="MainActivity.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Owl.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Owl.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Owl.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Owl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\BackgroundLayer1.xnb">
+      <Link>Assets\Content\BackgroundLayer1.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\BackgroundLayer2.xnb">
+      <Link>Assets\Content\BackgroundLayer2.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\BackgroundLayer3.xnb">
+      <Link>Assets\Content\BackgroundLayer3.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\BackgroundLayer4.xnb">
+      <Link>Assets\Content\BackgroundLayer4.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\GameOver.xnb">
+      <Link>Assets\Content\GameOver.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\GameOverMusic.m4a">
+      <Link>Assets\Content\GameOverMusic.m4a</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\GameOverMusic.xnb">
+      <Link>Assets\Content\GameOverMusic.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Grass.xnb">
+      <Link>Assets\Content\Grass.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Intro.m4a">
+      <Link>Assets\Content\Intro.m4a</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Intro.xnb">
+      <Link>Assets\Content\Intro.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level1Music.m4a">
+      <Link>Assets\Content\Level1Music.m4a</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level1Music.xnb">
+      <Link>Assets\Content\Level1Music.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level2Background1.xnb">
+      <Link>Assets\Content\Level2Background1.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level2Background2.xnb">
+      <Link>Assets\Content\Level2Background2.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level2Background3.xnb">
+      <Link>Assets\Content\Level2Background3.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level2Music.m4a">
+      <Link>Assets\Content\Level2Music.m4a</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Level2Music.xnb">
+      <Link>Assets\Content\Level2Music.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Mouse.xnb">
+      <Link>Assets\Content\Mouse.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Ow.xnb">
+      <Link>Assets\Content\Ow.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Owl.xnb">
+      <Link>Assets\Content\Owl.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\stone.xnb">
+      <Link>Assets\Content\stone.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\AnnoyedOwls.Content\Android\Content\Title.xnb">
+      <Link>Assets\Content\Title.xnb</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.FSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Assets\Content\" />
+    <Folder Include="Resources\mipmap-hdpi\" />
+    <Folder Include="Resources\mipmap-mdpi\" />
+    <Folder Include="Resources\mipmap-xhdpi\" />
+    <Folder Include="Resources\mipmap-xxhdpi\" />
+    <Folder Include="Resources\mipmap-xxxhdpi\" />
+  </ItemGroup>
+</Project>
